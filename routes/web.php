@@ -31,11 +31,9 @@ use Illuminate\Support\Facades\Cache;
     
 
 Route::get('/', function () {
-   // $surahs= Surah::all();
-    return "yes work";
-   // return Inertia::render('mywelcome', [
-      //  'surahs'=> $surahs,
-   // ]);
+    $surahs= Surah::all();
+    // return "yes work";
+    return Inertia::render('mywelcome', ['surahs'=> $surahs, ]);
 });
 
 Route::inertia('/download','download');
