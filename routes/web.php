@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Cache;
 
 Route::get('/', function () {
     $surahs= Surah::all();
-    // return "yes work";
+  //  $surahs= DB::connection('pgsql')->table('surahs')->distinct()->get();
     return Inertia::render('mywelcome', ['surahs'=> $surahs, ]);
 });
 
