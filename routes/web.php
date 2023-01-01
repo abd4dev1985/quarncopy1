@@ -30,11 +30,16 @@ use Illuminate\Support\Facades\Cache;
 */
     
 
+
 Route::get('/', function () {
     $surahs= Surah::all();
-  //  $surahs= DB::connection('pgsql')->table('surahs')->distinct()->get();
-    return Inertia::render('mywelcome', ['surahs'=> $surahs, ]);
+    //return view('app2');
+    return Inertia::render('mywelcome', [
+        'surahs'=> $surahs,
+    ]);
 });
+
+
 
 Route::inertia('/download','download');
 
