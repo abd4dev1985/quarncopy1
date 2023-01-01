@@ -65,7 +65,7 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => 'postgres://surahsalquran_user:85AdkW3AWpXS76RMvIfdmw2gFC0Jukkk@dpg-cebjm1arrk0bbtf1s6vg-a/surahsalquran',
+            'url' => env('DB_URL'),
             'port' => env('DB_PORT_', '5432'),
             
             
